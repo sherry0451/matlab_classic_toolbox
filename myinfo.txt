@@ -2,3 +2,40 @@ A Critical Comparison Among Pansharpening Algorithms
 https://www.digitalglobe.com/samples
 Pansharpening Tool ver 1.3
 Toulouse_Pleiades_For_Toolbox.mat_
+
+存在的bug：
+------------------------------
+错误使用 princomp (line 13)
+princomp has been removed. Use pca instead.
+
+出错 PCA (line 32)
+[W,PCAData] = princomp(imageLR);
+
+出错 Untitled (line 61)
+I_PCA = PCA(I_MS,I_PAN);
+-----------------------------
+https://github.com/mvallieres/radiomics/tree/d3a61737730e1b2b46d04c9e22a3fcc390912f1a/STUDIES/HN_study/Functions/PRE-PROCESSING/PVEcorrection/Utilities
+
+未定义函数或变量 'ndwt2'。
+
+出错 ATWT (line 54)
+    WT = ndwt2(I_PAN(:,:,i),Levels,WF);
+
+出错 My_Reduced_Resolution (line 307)
+I_ATWT = ATWT(I_MS,I_PAN,ratio);
+
+未定义函数或变量 'ndwt2'。
+
+出错 AWLP (line 60)
+    WT = ndwt2(I_PAN(:,:,i),Levels,WF);
+
+出错 My_Reduced_Resolution (line 328)
+
+I_AWLP = AWLP(I_MS,I_PAN,ratio);
+未定义函数或变量 'ndwt2'。
+
+出错 ATWT_M2 (line 46)
+    WTP = ndwt2(I_PAN(:,:,i),Levels+1,WF);
+
+出错 My_Reduced_Resolution (line 350)
+I_ATWTM2 = ATWT_M2(I_MS,I_PAN,ratio);
