@@ -1,0 +1,4 @@
+A Critical Comparison Among Pansharpening Algorithms 
+https://www.digitalglobe.com/samples
+Pansharpening Tool ver 1.3
+Toulouse_Pleiades_For_Toolbox.mat_
